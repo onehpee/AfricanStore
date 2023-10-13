@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Employees Boye = new Employees(1, "clerk",1, "Ajinboye Uwensuyi", 25.50,new Date("05/05/85"));
 
-        Employees Ade = new Employees(2,"Manager",1,"Adedayo Uwensuyi", 50.50,new Date("01/01/90"));
+        Employees Ade = new Employees(2,"Manager",1,"Adedayo Uwensullyi", 50.50,new Date("01/01/90"));
 
         Employees Uyi = new Employees(3,"staff",1,"Uyi Omofonmwan", 45.00,new Date("02/02/96"));
 
