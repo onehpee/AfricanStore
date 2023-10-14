@@ -2,8 +2,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.Objects;
 
 public class Employees {
     private int id;
@@ -14,6 +12,8 @@ public class Employees {
 
     private double totalTips;
     private Date dateEmployed;
+
+    Employees[] employeesList;
 
     private int timeEmployed;
 
@@ -75,9 +75,25 @@ public class Employees {
      */
     public Date getDateEmployed(){return dateEmployed;}
 
+    public static Employees[] addEmployee(int size, Employees[] employeesList, Employees x){
+        Employees[] newEmployeeList = new Employees[size+1];
+
+        for(int i = 0; i < size; i++) {
+            newEmployeeList[i] = employeesList[i];
+            newEmployeeList[size] = x;
+        }
+        return newEmployeeList;
+    }
+
+    public static Employees[] addEmployee2(int size, Employees[] employeesList, Employees x){
+        for(int i = 0; i < size; i++) {
+            employeesList[i] = x;
+         //   newEmployeeList[size] = x;
+        }
+        return employeesList;
+    }
+
     public String toString(){
         return name;
     }
-
-
 }
