@@ -15,6 +15,10 @@ public class Main {
 
         Employees Uyi = new Employees(3,"staff",1,"Uyi Omofonmwan", 45.00,new Date("02/02/96"));
 
+        Employees Oseratin = new Employees(4,"staff",1,"Oseratin Omofonmwan", 45.00,new Date("02/03/97"));
+
+        Employees Princess = new Employees(5,"staff",1,"Princess", 45.00,new Date("07/02/05"));
+
         Employees[] employeesList = new Employees[3];
         Employees[] cup = new Employees[3];
 
