@@ -76,21 +76,19 @@ public class Employees {
     public Date getDateEmployed(){return dateEmployed;}
 
     public static Employees[] addEmployee(int size, Employees[] employeesList, Employees x){
-        Employees[] newEmployeeList = new Employees[size+1];
+        Employees[] newEmployeeList = new Employees[size];
 
-        for(int i = 0; i < size; i++) {
+        for(int i = 0; i < size-1; i++) {
             newEmployeeList[i] = employeesList[i];
-            newEmployeeList[size] = x;
         }
+        newEmployeeList[size-1]=x;
         return newEmployeeList;
     }
 
-    public static Employees[] addEmployee2(int size, Employees[] employeesList, Employees x){
-        for(int i = 0; i < size; i++) {
-            employeesList[i] = x;
-         //   newEmployeeList[size] = x;
+    public static void addEmployee2(int index, Employees[] employeesList, Employees x){
+        if (index<=employeesList.length-1) {
+            employeesList[index] = x;
         }
-        return employeesList;
     }
 
     public String toString(){

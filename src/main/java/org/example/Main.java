@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -26,17 +27,18 @@ public class Main {
         //employeesList[1] = Boye;
         //employeesList[2] = Uyi;
 
-        addEmployee2(3,employeesList,Uyi);
-        addEmployee2(3,employeesList,Ade);
-        addEmployee2(3,employeesList,Boye);
-
+        addEmployee2(0,employeesList,Uyi);
+        addEmployee2(1,employeesList,Ade);
+        addEmployee2(2,employeesList,Boye);
+        addEmployee2(3,employeesList,Oseratin);
+        employeesList = addEmployee(4, employeesList, Oseratin);
 
 
 
         Store Sesi = new Store(1, "17545 Kedzie Ave","Sesi African Groceries",3854.85,4,employeesList);
 
 
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < employeesList.length; i++){
             System.out.println(employeesList[i]);
         }
     }
