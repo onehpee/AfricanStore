@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import static org.example.Employees.addEmployee;
-import static org.example.Employees.addEmployee2;
+import static org.example.Store.addEmployee;
+import static org.example.Store.addEmployee2;
 
 public class Main {
     public static void main(String[] args) {

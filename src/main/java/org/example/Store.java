@@ -42,4 +42,40 @@ public class Store implements OwnedStores {
     public int getNumberOfStaff() {return numberOfStaff;}
 
     public Employees[] getEmployees() {return employees;}
+
+    public static Employees[] addEmployee(int size, Employees[] employeesList, Employees x){
+        Employees[] newEmployeeList = new Employees[size];
+
+        for(int i = 0; i < size-1; i++) {
+            newEmployeeList[i] = employeesList[i];
+        }
+        newEmployeeList[size-1]=x;
+        return newEmployeeList;
+    }
+
+    public static void addEmployee2(int index, Employees[] employeesList, Employees x){
+        if (index<=employeesList.length-1) {
+            employeesList[index] = x;
+        }
+    }
+
+    public static Employees[] removeEmployee(Employees[] fired, int index){
+        if (fired == null || index < 0
+                || index >= fired.length) {
+
+            return fired;
+        }
+
+        Employees[] newFired = new Employees[fired.length - 1];
+
+        for (int i = 0, k = 0; i < fired.length; i++ ){
+            if(i == index){
+                continue;
+            }
+
+            newFired[k++] = fired[i];
+        }
+
+        return newFired;
+    }
 }
