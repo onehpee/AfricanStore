@@ -58,7 +58,7 @@ public class Employees {
     public int getStoreNum(){return storeNum;}
 
     /**
-     * Get the name of the employee
+     * Get the name of the employeee
      * @return the Name
      */
     public String getName(){return name;}
