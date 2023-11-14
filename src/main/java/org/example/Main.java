@@ -1,9 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import static org.example.Store.addEmployee;
 import static org.example.Store.addEmployee2;
@@ -20,7 +17,7 @@ public class Main {
 
         Employees Princess = new Employees(5,"staff",1,"Princess", 45.00,new Date("07/02/05"));
 
-        Employees[] employeesList = new Employees[3];
+        Stack<Employees> employeesList = new Stack<>();
         Employees[] cup = new Employees[3];
 
         //employeesList[0] = Ade;
@@ -31,15 +28,15 @@ public class Main {
         addEmployee2(1,employeesList,Ade);
         addEmployee2(2,employeesList,Boye);
         addEmployee2(3,employeesList,Oseratin);
-        employeesList = addEmployee(4, employeesList, Oseratin);
+        addEmployee(4, employeesList, Oseratin);
 
 
 
-        Store Sesi = new Store(1, "17545 Kedzie Ave","Sesi African Groceries",3854.85,4,employeesList);
+       // Store Sesi = new Store(1, "17545 Kedzie Ave","Sesi African Groceries",3854.85,4,employeesList);
 
 
-        for(int i = 0; i < employeesList.length; i++){
-            System.out.println(employeesList[i]);
+        for(int i = 0; i < employeesList.; i++){
+            System.out.println(employeesList.get(i));
         }
     }
 }
