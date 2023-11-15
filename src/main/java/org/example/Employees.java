@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Employees {
@@ -43,6 +44,8 @@ public class Employees {
      * Gets the employee Id
      * @return the ID
      */
+
+
     public int getId(){return id;}
 
     /**
@@ -76,9 +79,19 @@ public class Employees {
     public Date getDateEmployed(){return dateEmployed;}
 
 
-
-    public String toString(){
-        return name;
+    @Override
+    public String toString() {
+        return "Employees{" +
+                "id=" + id +
+                ", role='" + role + '\'' +
+                ", storeNum=" + storeNum +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                ", totalTips=" + totalTips +
+                ", dateEmployed=" + dateEmployed +
+                ", employeesList=" + Arrays.toString(employeesList) +
+                ", timeEmployed=" + timeEmployed +
+                '}';
     }
 }
 
