@@ -7,7 +7,7 @@ public class Store implements OwnedStores {
     private double revenue;
 
     private int numberOfStaff;
-    private EmployeeList[] employees;
+    private EmployeeList employees;
 
 
     /**
@@ -19,13 +19,13 @@ public class Store implements OwnedStores {
      * @param numberOfStaff The number of staff the works at the store
      * @param employees A list of employees in the store
      */
-    public Store(int storeNum, String location, String name, double revenue, int numberOfStaff, EmployeeList[] employees){
+    public Store(int storeNum, String location, String name, double revenue){
         this.storeNum=storeNum;
         this.location=location;
         this.name=name;
         this.revenue=revenue;
-        this.numberOfStaff=numberOfStaff;
-        this.employees=employees;
+        this.numberOfStaff=0;
+        this.employees=new EmployeeList(10);
     }
 
     public int getStoreNum() {return storeNum;}
@@ -40,7 +40,7 @@ public class Store implements OwnedStores {
 
     public int getNumberOfStaff() {return numberOfStaff;}
 
-    public EmployeeList[] getEmployeeList() {return employees;}
+    public Employees[] getEmployeeList() {return employees.getList();}
 
 
 }

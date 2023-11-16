@@ -3,12 +3,12 @@ package org.example;
 public class EmployeeList {
     private int capacity;
     private int size;
-    private EmployeeList[] list;
+    private Employees[] list;
 
     public EmployeeList(int capacity) {
         this.capacity = capacity;
         this.size = 0;
-        this.list = new EmployeeList[capacity];
+        this.list = new Employees[capacity];
     }
 
     public boolean isEmpty(){
@@ -20,22 +20,24 @@ public class EmployeeList {
     }
 
     public void addEmployee(Employees employees){
-        Employees[] newEmployee = new Employees[capacity];
-        if(isFull()){
-            return;
+        if (isFull()){
+            Employees[] newEmployeeList = new Employees[capacity+=20];
+            System.out.println("old list " + capacity);
+            System.out.println("new list " + newEmployeeList.length);
+            for (int i = 0; i < size; i++){
+                newEmployeeList[i] = list[i];
+            }
+            list = newEmployeeList;
+            System.out.println("old list2 " + capacity);
         }
-        for(int i = 0; i < size-1; i++) {
-            newEmployee[i++] = employees;
-        }
-        newEmployee[capacity-1]=employees;
-
+        list[size++] = employees;
     }
 
-    public EmployeeList removeEmployee(){
+    public Employees removeEmployee(){
         if (isEmpty()){
             return null;
         }
-        EmployeeList newFired = list[size-1];
+        Employees newFired = list[size-1];
         list[--size] = null;
         return newFired;
     }
@@ -44,5 +46,9 @@ public class EmployeeList {
         for (int i = size-1; i >= 0; i--){
             System.out.println(list[i]);
         }
+    }
+
+    public Employees[] getList(){
+        return list;
     }
 }

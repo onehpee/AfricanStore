@@ -13,5 +13,5 @@ public interface OwnedStores {
 
     public int getNumberOfStaff();
 
-    public EmployeeList[] getEmployeeList();
+    public Employees[] getEmployeeList();
 }

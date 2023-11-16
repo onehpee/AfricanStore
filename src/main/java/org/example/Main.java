@@ -16,6 +16,7 @@ public class Main {
         Employees Oseratin = new Employees(4,"staff",1,"Oseratin Omofonmwan", 45.00,new Date("02/03/97"));
 
         Employees Princess = new Employees(5,"staff",1,"Princess", 45.00,new Date("07/02/05"));
+        Employees Sammy = new Employees(6,"staff",1,"Sanmisola Uwensuyi", 0.50,new Date("1/1/20"));
 
         //Employee[] cup = new Employees[3];
         EmployeeList employeeList = new EmployeeList(5);
@@ -24,6 +25,7 @@ public class Main {
         employeeList.addEmployee(Boye);
         employeeList.addEmployee(Oseratin);
         employeeList.addEmployee(Princess);
+        employeeList.addEmployee(Sammy);
 
         //Store sesi = new Store(1, "17545 Kedzie Ave","Sesi African Groceries",3854.85,4, new EmployeeList[]{employeeList});
         //employeesList[0] = Ade;
